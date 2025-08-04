@@ -20,7 +20,7 @@ import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import Stake from "./pages/Stake";
 import Burn from "./pages/Burn";
-import Swap from "./pages/Swap";
+import Swap from "./pages/swap";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
