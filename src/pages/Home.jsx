@@ -112,7 +112,7 @@ export default function Home() {
   {/* Dexscreener (using SiDexscreener or FaChartBar as placeholder) */}
   <a href="https://dexscreener.com/solana/fccy2nds3ubqypwzir5pq1qdaqgkg6qnd6n4nzzvhovh" target="_blank" rel="noopener noreferrer"
     aria-label="Dexscreener" className="bg-[#17c671] rounded-full flex items-center justify-center w-12 h-12 shadow-lg hover:scale-110 transition">
-    <SiDexscreener size="1.8em" color="white" />
+    <SiTradingview size="1.8em" color="white" />
   </a>
   {/* TikTok */}
   <a href="https://www.tiktok.com/@thefonduecoin?_t=ZN-8yGCoyqi5Xa&_r=1" target="_blank" rel="noopener noreferrer"
