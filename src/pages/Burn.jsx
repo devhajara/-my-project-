@@ -4,7 +4,7 @@ import { PublicKey } from "@solana/web3.js";
 import { getAccount, getAssociatedTokenAddress, getMint } from "@solana/spl-token";
 import { motion } from "framer-motion";
 import Logo from "../components/logo";
-
+import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 // FOND token mint address
 const FOND_MINT = "A3GCAAwFxAUgx97j9uw8Vkf8MaFqUut2tsyAXq9Cpump";
 
