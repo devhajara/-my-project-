@@ -5,7 +5,7 @@ import { Globe2 } from "lucide-react";
 import { SiTelegram, SiTiktok, SiInstagram, SiYoutube, SiX } from "react-icons/si";
 import { FiGlobe } from "react-icons/fi";
 import { FaTwitter, FaTelegramPlane, FaTiktok, FaYoutube, FaInstagram, FaGlobe } from "react-icons/fa";
-import { SiDexscreener } from "react-icons/si"; // Dexscreener isn't in FA, so we use a similar or placeholder icon
+import { SiTradingview } from "react-icons/si"; // Dexscreener isn't in FA, so we use a similar or placeholder icon
 
 export default function Home() {
   return (
