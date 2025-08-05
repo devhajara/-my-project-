@@ -25,7 +25,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const network = WalletAdapterNetwork.Mainnet; // Change to 'Mainnet' for main launch
-  const endpoint = "https://mainnet.helius-rpc.com/?api-key=2a7a5dbd-6f5a-4f09-b31d-f8967b43ec9f";
+const endpoint = clusterApiUrl("mainnet-beta");
 
   const wallets = useMemo(
     () => [
