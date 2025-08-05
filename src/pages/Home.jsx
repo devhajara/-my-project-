@@ -102,7 +102,7 @@ export default function Home() {
   {/* Twitter (X) */}
   <a href="https://x.com/thefonduecoin?s=21" target="_blank" rel="noopener noreferrer"
     aria-label="X" className="bg-black rounded-full flex items-center justify-center w-12 h-12 shadow-lg hover:scale-110 transition">
-    <FaXTwitter size="1.8em" color="white" />
+    <FaTwitter size="1.8em" color="white" />
   </a>
   {/* Telegram */}
   <a href="https://t.me/thefonduecoin" target="_blank" rel="noopener noreferrer"
