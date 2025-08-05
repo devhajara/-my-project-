@@ -33,13 +33,20 @@ export default function Swap() {
       console.log("Connected wallet:", publicKey?.toBase58());
       try {
         // Get FOND balance
-        const mint = new PublicKey(FOND_MINT);
-const ata = await getAssociatedTokenAddress(mint, publicKey);
-const account = await getAccount(connection, ata);
-const mintInfo = await getMint(connection, mint);
+       try {
+  const mint = new PublicKey(FOND_MINT);
+  const ata = await getAssociatedTokenAddress(mint, publicKey);
+  const account = await getAccount(connection, ata);
+  const mintInfo = await getMint(connection, mint);
 
-setFondDecimals(mintInfo.decimals);
-setFondBalance(Number(account.amount) / 10 ** mintInfo.decimals);
+  setFondDecimals(mintInfo.decimals);
+  const fond = Number(account.amount) / 10 ** mintInfo.decimals;
+  console.log("✅ FOND balance fetched:", fond);
+  setFondBalance(fond);
+} catch (err) {
+  console.error("❌ Error fetching FOND balance:", err);
+  setFondBalance(0);
+}
         console.log("Connected wallet:", publicKey?.toBase58());
       } catch {
         setFondBalance(0);
