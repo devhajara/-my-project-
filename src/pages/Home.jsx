@@ -106,7 +106,6 @@ export default function Home() {
     aria-label="X"
     className="bg-black rounded-full flex items-center justify-center w-12 h-12 shadow-lg hover:scale-110 transition"
   >
-    {/* X icon SVG */}
     <svg width="1.8em" height="1.8em" viewBox="0 0 24 24" fill="white">
       <path d="M18.26 2H21.74L14.92 10.21L23 22H16.48L11.32 14.8L5.47 22H2L9.23 13.22L1.5 2H8.13L12.76 8.49L18.26 2ZM17.13 20H19.09L7.17 4H5.12L17.13 20Z" />
     </svg>
@@ -131,7 +130,6 @@ export default function Home() {
     aria-label="Dexscreener"
     className="bg-[#17c671] rounded-full flex items-center justify-center w-12 h-12 shadow-lg hover:scale-110 transition"
   >
-    {/* Use your custom SVG */}
     <svg width="1.8em" height="1.8em" viewBox="0 0 36 36" fill="white">
       <rect x="8" y="24" width="4" height="4" rx="1" />
       <rect x="14" y="20" width="4" height="8" rx="1" />
@@ -147,7 +145,6 @@ export default function Home() {
     aria-label="TikTok"
     className="bg-[#FE2C55] rounded-full flex items-center justify-center w-12 h-12 shadow-lg hover:scale-110 transition"
   >
-    {/* TikTok SVG */}
     <svg width="1.8em" height="1.8em" viewBox="0 0 32 32" fill="white">
       <path d="M21 7.13V18.48A7.5 7.5 0 1 1 13.5 11h.77v3.06h-.77A4.5 4.5 0 1 0 18 18.5v-8.37c1.14.73 2.5 1.18 4 1.22V7.27c-1.18-.04-2.27-.43-3-1.14z"/>
     </svg>
@@ -176,6 +173,21 @@ export default function Home() {
       <path d="M16 8.32A7.68 7.68 0 1 0 23.68 16 7.69 7.69 0 0 0 16 8.32zm0 12.72A5 5 0 1 1 21 16a5 5 0 0 1-5 5z"/>
       <circle cx="24.5" cy="7.5" r="1.5"/>
       <path d="M27.58 8.23A6.54 6.54 0 0 0 23.77 4.42C21.52 3.38 18.3 3.25 16 3.25s-5.52.13-7.77 1.17a6.54 6.54 0 0 0-3.81 3.81C3.38 10.48 3.25 13.7 3.25 16s.13 5.52 1.17 7.77a6.54 6.54 0 0 0 3.81 3.81c2.25 1.04 5.47 1.17 7.77 1.17s5.52-.13 7.77-1.17a6.54 6.54 0 0 0 3.81-3.81c1.04-2.25 1.17-5.47 1.17-7.77s-.13-5.52-1.17-7.77zM16 24.09a8.09 8.09 0 1 1 8.09-8.09A8.1 8.1 0 0 1 16 24.09z"/>
+    </svg>
+  </a>
+  {/* Website */}
+  <a
+    href="https://fonduecoin.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Website"
+    className="bg-gradient-to-tr from-blue-500 via-cyan-400 to-indigo-400 rounded-full flex items-center justify-center w-12 h-12 shadow-lg hover:scale-110 transition"
+  >
+    {/* Simple Globe SVG */}
+    <svg width="1.8em" height="1.8em" viewBox="0 0 24 24" fill="white">
+      <circle cx="12" cy="12" r="10" stroke="white" strokeWidth="2" fill="none"/>
+      <ellipse cx="12" cy="12" rx="7" ry="10" stroke="white" strokeWidth="2" fill="none"/>
+      <line x1="2" y1="12" x2="22" y2="12" stroke="white" strokeWidth="2"/>
     </svg>
   </a>
 </div>
