@@ -24,33 +24,42 @@ export default function Swap() {
 
   // Fetch FOND balance and decimals
   useEffect(() => {
-    async function fetchBalances() {
-      if (!publicKey) {
-        setFondBalance(null);
-        setSolBalance(null);
-        return;
-      }
-      try {
-        // Get FOND balance
-        const mint = new PublicKey(FOND_MINT);
-        const ata = await getAssociatedTokenAddress(mint, publicKey);
-        const account = await getAccount(connection, ata);
-        const mintInfo = await getMint(connection, mint);
-        setFondDecimals(mintInfo.decimals);
-        setFondBalance(Number(account.amount) / Math.pow(10, mintInfo.decimals));
-      } catch {
-        setFondBalance(0);
-      }
-      try {
-        // Get SOL balance
-        const solLamports = await connection.getBalance(publicKey);
-        setSolBalance(solLamports / 1e9); // 1 SOL = 1e9 lamports
-      } catch {
-        setSolBalance(0);
-      }
+  async function fetchBalances() {
+    if (!publicKey) {
+      setFondBalance(null);
+      setSolBalance(null);
+      return;
     }
-    fetchBalances();
-  }, [publicKey, connection]);
+    try {
+      const mint = new PublicKey(FOND_MINT);
+      const ata = await getAssociatedTokenAddress(mint, publicKey);
+      console.log("FOND ATA:", ata.toBase58());
+
+      const account = await getAccount(connection, ata);
+      const mintInfo = await getMint(connection, mint);
+
+      console.log("FOND raw amount:", account.amount.toString());
+      console.log("FOND decimals:", mintInfo.decimals);
+
+      setFondDecimals(mintInfo.decimals);
+      setFondBalance(Number(account.amount) / Math.pow(10, mintInfo.decimals));
+    } catch (e) {
+      console.warn("No FOND account found or error fetching:", e);
+      setFondBalance(0);
+    }
+
+    try {
+      const solLamports = await connection.getBalance(publicKey);
+      console.log("SOL balance:", solLamports);
+      setSolBalance(solLamports / 1e9);
+    } catch (e) {
+      console.warn("Error fetching SOL:", e);
+      setSolBalance(0);
+    }
+  }
+
+  fetchBalances();
+}, [publicKey, connection]);
 
   // Token display labels
   const tokenLabel = (tk) =>
